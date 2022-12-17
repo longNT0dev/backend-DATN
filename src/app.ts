@@ -18,6 +18,7 @@ class App {
     this.setupRouter();
   }
   private setupMiddleware() {
+    this.app.use(express.static('public'))
     this.app.use(json());
     this.app.use(
       cors({
